@@ -1,0 +1,11 @@
+:root {
+    --padding: 25px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Overpass', sans-serif;
+}
