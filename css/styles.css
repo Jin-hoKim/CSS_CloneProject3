@@ -1,11 +1,118 @@
 :root {
-    --padding: 25px;
+    --borderRad: 10px;
 }
 
 * {
     box-sizing: border-box;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: 'Overpass', sans-serif;
+    background-color: #fafafa;
+    color: rgba(0, 0, 0, 0.8);
+    padding: 0px 15px;
+}
+
+.header {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.header .header__title {
+    margin-bottom: 0px;
+    font-size: 45px;
+}
+
+.header .header__subtitle {
+    font-weight: 200;
+    font-size: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    box-sizing: border-box;
+    grid-gap: 20px;
+    grid-auto-flow: dense;
+}
+
+.grid .grid__hero-item {
+    grid-column: span 2;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)), url("https://i-h1.pinimg.com/564x/c3/e5/46/c3e54657597977f9a602dbc48f0e6871.jpg?b=t");
+    background-position: center center;
+    background-size: cover;
+    color: #ffffff;
+    padding: 20px 10px;
+    border-radius: var(--borderRad);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    font-weight: 400;
+}
+
+.grid__hero-item .hero-item__title {
+    align-self: flex-end;
+    font-size: 22px;
+}
+
+.grid__hero-item .hero-item__subtitle {
+    width: 70%;
+    font-size: 16px;
+}
+
+.grid-item {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    max-width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1), 0 6px 3px rgba(0, 0, 0, 0.1);
+    border-radius: var(--borderRad);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    /* height: fit-content; */
+    /* grid-column: span 2 / auto; */
+}
+
+.grid-item .grid-item__photo {
+    max-width: 100%;
+    border-radius: var(--borderRad);
+    margin: 5px;
+    margin-bottom: 10px;
+}
+
+.grid .grid-item .grid-item__title {
+    font-weight: 800;
+    font-size: 16px;
+    margin: 5px;
+}
+
+.grid .grid-item__subtitle {
+    color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    height: 100%;
+    max-height: 150px;
+    flex-flow: row;
+    justify-content: flex-start;
+    overflow: auto;
+    margin: 5px;
+    margin-bottom: 15px;
+}
+
+.grid .grid-item__more {
+    color: rgba(0, 0, 0, 0.6);
+    text-transform: uppercase;
+    text-align: right;
+    cursor: pointer;
+    margin: 10px;
 }
